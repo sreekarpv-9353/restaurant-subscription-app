@@ -87,7 +87,7 @@ function App() {
             <div className="support-message">
               <div className="message-content">
                 <h3>Thank You for Your Interest!</h3>
-                <p>Please reach out to our customer support team to complete your annual subscription.</p>
+                <p>Please reach out to our customer support team to complete your annual / Monthly subscription.</p>
                 <div className="support-contact">
                   <strong>Customer Support:</strong>
                   <div className="phone-number">flashfood813@gmail.com</div>
