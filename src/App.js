@@ -45,7 +45,9 @@ function App() {
                 <button 
                 className="btn btn-secondary"
                 onClick={handleAnnualPlanClick}
-              ></button>
+              >
+                Select Monthly Plan
+              </button>
             </div>
             
             {/* Annual Plan with Offer */}
