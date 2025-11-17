@@ -41,7 +41,11 @@ function App() {
                 <li>Basic analytics</li>
                 
               </ul>
-              <button className="btn btn-secondary">Select Monthly Plan</button>
+              {/* <button className="btn btn-secondary">Select Monthly Plan</button> */}
+                <button 
+                className="btn btn-secondary"
+                onClick={handleAnnualPlanClick}
+              ></button>
             </div>
             
             {/* Annual Plan with Offer */}
