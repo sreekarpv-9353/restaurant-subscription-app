@@ -3,10 +3,16 @@ import './App.css';
 
 function App() {
   const [showSupportMessage, setShowSupportMessage] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState('');
 
-  const handleAnnualPlanClick = () => {
-    // In a real app, you would add Firebase integration here
+  const handlePlanClick = (planType) => {
+    setSelectedPlan(planType);
     setShowSupportMessage(true);
+  };
+
+  const handleCloseMessage = () => {
+    setShowSupportMessage(false);
+    setSelectedPlan('');
   };
 
   return (
@@ -39,12 +45,10 @@ function App() {
                 <li>Customer management</li>
                 <li>Menu management</li>
                 <li>Basic analytics</li>
-                
               </ul>
-              {/* <button className="btn btn-secondary">Select Monthly Plan</button> */}
-                <button 
+              <button 
                 className="btn btn-secondary"
-                onClick={handleAnnualPlanClick}
+                onClick={() => handlePlanClick('monthly')}
               >
                 Select Monthly Plan
               </button>
@@ -75,7 +79,7 @@ function App() {
               </ul>
               <button 
                 className="btn btn-primary"
-                onClick={handleAnnualPlanClick}
+                onClick={() => handlePlanClick('annual')}
               >
                 Get Annual Plan
               </button>
@@ -87,14 +91,14 @@ function App() {
             <div className="support-message">
               <div className="message-content">
                 <h3>Thank You for Your Interest!</h3>
-                <p>Please reach out to our customer support team to complete your annual / Monthly subscription.</p>
+                <p>Please reach out to our customer support team to complete your {selectedPlan} subscription.</p>
                 <div className="support-contact">
-                  <strong>Customer Support:</strong>
-                  <div className="phone-number">flashfood813@gmail.com</div>
+                  <strong>Customer Support Email:</strong>
+                  <div className="email-address">flashfood813@gmail.com</div>
                 </div>
                 <button 
-                  className="btn btn-secondary"
-                  onClick={() => setShowSupportMessage(false)}
+                  className="btn btn-secondary close-btn"
+                  onClick={handleCloseMessage}
                 >
                   Close
                 </button>
@@ -106,7 +110,7 @@ function App() {
       
       <footer>
         <div className="container">
-          <p>&copy; 2023 Restaurant Management System. All rights reserved.</p>
+          <p>&copy; 2024 Restaurant Management System. All rights reserved.</p>
           <p>Contact us: flashfood813@gmail.com</p>
         </div>
       </footer>

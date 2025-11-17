@@ -1,3 +1,4 @@
+/* App.css */
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +23,6 @@ header {
   color: white;
   padding: 30px 0;
   text-align: center;
-  border-radius: 0 0 10px 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
@@ -38,6 +38,7 @@ header p {
 
 .pricing-section {
   padding: 60px 0;
+  min-height: calc(100vh - 200px);
 }
 
 .section-title {
@@ -208,6 +209,7 @@ header p {
   background: #1a252f;
 }
 
+/* Support Message - Fixed for Mobile */
 .support-message {
   position: fixed;
   top: 0;
@@ -219,27 +221,34 @@ header p {
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .message-content {
   background: white;
-  padding: 40px;
+  padding: 30px;
   border-radius: 10px;
   max-width: 500px;
-  width: 90%;
+  width: 100%;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .message-content h3 {
   color: #27ae60;
   margin-bottom: 15px;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .message-content p {
   margin-bottom: 20px;
   color: #7f8c8d;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .support-contact {
@@ -247,13 +256,33 @@ header p {
   padding: 15px;
   background: #f8f9fa;
   border-radius: 5px;
+  border-left: 4px solid #3498db;
 }
 
-.phone-number {
-  font-size: 1.5rem;
+.support-contact strong {
+  color: #2c3e50;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.email-address {
+  font-size: 1.2rem;
   font-weight: bold;
-  color: #3498db;
-  margin-top: 10px;
+  color: #e74c3c;
+  word-break: break-all;
+  padding: 10px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.close-btn {
+  margin-top: 20px;
+  background: #95a5a6;
+}
+
+.close-btn:hover {
+  background: #7f8c8d;
 }
 
 footer {
@@ -262,10 +291,31 @@ footer {
   text-align: center;
   padding: 30px 0;
   margin-top: 60px;
-  border-radius: 10px 10px 0 0;
 }
 
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  header p {
+    font-size: 1rem;
+  }
+  
+  .pricing-section {
+    padding: 30px 0;
+  }
+  
+  .pricing-card {
+    padding: 20px;
+    max-width: 100%;
+  }
+  
   .pricing-card.featured {
     transform: scale(1);
   }
@@ -273,4 +323,84 @@ footer {
   .pricing-card.featured:hover {
     transform: translateY(-10px);
   }
+  
+  .price-amount {
+    font-size: 2.5rem;
+  }
+  
+  .discount-price {
+    font-size: 2rem;
+  }
+  
+  .message-content {
+    padding: 25px 20px;
+    margin: 10px;
+    max-height: 85vh;
+  }
+  
+  .message-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .email-address {
+    font-size: 1rem;
+    padding: 8px;
+  }
+  
+  .support-contact {
+    margin: 20px 0;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 20px 0;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .section-title h2 {
+    font-size: 1.5rem;
+  }
+  
+  .plan-name {
+    font-size: 1.3rem;
+  }
+  
+  .price-amount {
+    font-size: 2rem;
+  }
+  
+  .discount-price {
+    font-size: 1.8rem;
+  }
+  
+  .original-price {
+    font-size: 1.2rem;
+  }
+  
+  .btn {
+    padding: 12px;
+    font-size: 1rem;
+  }
+  
+  .message-content {
+    padding: 20px 15px;
+  }
+  
+  .message-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .email-address {
+    font-size: 0.9rem;
+  }
+}
+
+/* Prevent body scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
 }
