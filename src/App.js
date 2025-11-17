@@ -35,11 +35,11 @@ function App() {
               </div>
               <ul className="plan-features">
                 <li>Full access to admin panel</li>
-                <li>Restaurant mobile app</li>
+                <li>Customer mobile app</li>
                 <li>Customer management</li>
                 <li>Menu management</li>
                 <li>Basic analytics</li>
-                <li>Email support</li>
+                
               </ul>
               <button className="btn btn-secondary">Select Monthly Plan</button>
             </div>
@@ -61,10 +61,8 @@ function App() {
               </div>
               <ul className="plan-features">
                 <li>Everything in Monthly Plan</li>
-                <li>Advanced analytics & reports</li>
                 <li>Priority customer support</li>
                 <li>Custom integrations</li>
-                <li>Marketing tools</li>
                 <li>Free setup assistance</li>
               </ul>
               <button 
