@@ -84,7 +84,7 @@ function App() {
                 <p>Please reach out to our customer support team to complete your annual subscription.</p>
                 <div className="support-contact">
                   <strong>Customer Support:</strong>
-                  <div className="phone-number">supportflash@gmail.com</div>
+                  <div className="phone-number">flashfood813@gmail.com</div>
                 </div>
                 <button 
                   className="btn btn-secondary"
@@ -101,7 +101,7 @@ function App() {
       <footer>
         <div className="container">
           <p>&copy; 2023 Restaurant Management System. All rights reserved.</p>
-          <p>Contact us: supportflash@gmail.com</p>
+          <p>Contact us: flashfood813@gmail.com</p>
         </div>
       </footer>
     </div>
