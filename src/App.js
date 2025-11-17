@@ -64,6 +64,8 @@ function App() {
                 <li>Priority customer support</li>
                 <li>Custom integrations</li>
                 <li>Free setup assistance</li>
+                <li>Zone wise delivery fee integration</li>
+                <li>Minimum Delivery Value setup</li>
               </ul>
               <button 
                 className="btn btn-primary"
