@@ -243,7 +243,7 @@ console.log([...formData.entries()]);
             <div className="pricing-card featured">
               <div className="badge">Popular</div>
               <h3>6 Months</h3>
-              <div className="price">₹55,000</div>
+              <div className="price">₹60,000</div>
               <ul className="list">
                 <li>Priority support</li>
                 <li>Unlimited stores</li>
